@@ -682,7 +682,7 @@ export const POST = async (
   req: AuthenticatedMedusaRequest<RequestType>,
   res: MedusaResponse
 ) => {
-  const link = req.scope.resolve("link")
+  const link = req.scope.resolve(ContainerRegistrationKeys.REMOTE_LINK);
   const marketplaceModuleService: MarketplaceModuleService = 
     req.scope.resolve(MARKETPLACE_MODULE)
   const productModuleService: IProductModuleService = req.scope
